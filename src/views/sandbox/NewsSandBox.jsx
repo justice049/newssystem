@@ -11,6 +11,7 @@ import Home from './home/Home'
 import RightList from './right-manage/RightList'
 import RoleList from './right-manage/RoleList'
 import UserList from './user-manage/UserList'
+import Nopermisson from './nopermisson/Nopermisson'
 
 export default function NewsSandBox() {
   return (
@@ -25,6 +26,7 @@ export default function NewsSandBox() {
           <Route path="/right-manage/right/list" element={<RightList />} />
 
           <Route path="/" element={<Navigate to="/home" />} />
+          <Route path='*' element={<Nopermisson/>}/>
         </Routes>
       </Router>
     </div>

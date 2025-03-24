@@ -1,22 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import style from './child.module.scss'
+import React from 'react'
+import { BrowserRouter } from 'react-router-dom'
+import NewsSandBox from './views/sandbox/NewsSandBox'
+import { ConfigProvider } from 'antd'
+import IndexRouter from './router/indexRouter'
 
 function App() {
   return (
-    <div>
-      app
-      <ul>
-        <li className={style.list}></li>
-        <li></li>
-        <li></li>
-      </ul>
-      <li>111</li>
-      <li>111</li>
-    </div>
+    // <ConfigProvider>
+    //   <BrowserRouter>
+    //     <NewsSandBox />
+    //   </BrowserRouter>
+    // </ConfigProvider>
+    // <div>我受不了了</div>
+    <IndexRouter>ranhoune</IndexRouter>
   )
 }
 
 export default App
+
+
+// import React, { Suspense } from 'react'
+// import { BrowserRouter } from 'react-router-dom'
+// import NewsSandBox from './views/sandbox/NewsSandBox'
+
+// const App = () => {
+//   return (
+//     <Suspense fallback={<div>Loading...</div>}>
+//       <BrowserRouter>
+//         <NewsSandBox />
+//       </BrowserRouter>
+//     </Suspense>
+//   )
+// }
+
+// export default App
